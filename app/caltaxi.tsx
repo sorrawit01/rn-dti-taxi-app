@@ -23,29 +23,29 @@ export default function Taxi() {
 
   // คำนวณตามระยะทาง
   if (remaining > 0) {
-    let d = Math.min(remaining, 9);
-    fare += d * 6.50;
-    remaining -= d;
+    let dis = Math.min(remaining, 9);
+    fare += dis * 6.50;
+    remaining -= dis;
   }
   if (remaining > 0) {
-    let d = Math.min(remaining, 10);
-    fare += d * 7.00;
-    remaining -= d;
+    let dis = Math.min(remaining, 10);
+    fare += dis * 7.00;
+    remaining -= dis;
   }
   if (remaining > 0) {
-    let d = Math.min(remaining, 20);
-    fare += d * 8.00;
-    remaining -= d;
+    let dis = Math.min(remaining, 20);
+    fare += dis * 8.00;
+    remaining -= dis;
   }
   if (remaining > 0) {
-    let d = Math.min(remaining, 20);
-    fare += d * 8.50;
-    remaining -= d;
+    let dis = Math.min(remaining, 20);
+    fare += dis * 8.50;
+    remaining -= dis;
   }
   if (remaining > 0) {
-    let d = Math.min(remaining, 20);
-    fare += d * 9.00;
-    remaining -= d;
+    let dis = Math.min(remaining, 20);
+    fare += dis * 9.00;
+    remaining -= dis;
   }
   if (remaining > 0) {
     fare += remaining * 10.50;
@@ -104,10 +104,10 @@ export default function Taxi() {
         <View style={{flexDirection: "row", width: "100%", padding: 20}}>
         <TouchableOpacity 
           onPress={handleCalculate}
-          style={styles.buttom70}><Text style={{fontFamily: "Kanit_700Bold", fontSize: 20, color: "white"}}>คำนวณราคา</Text></TouchableOpacity>
+          style={styles.buttomcal}><Text style={{fontFamily: "Kanit_700Bold", fontSize: 20, color: "white"}}>คำนวณราคา</Text></TouchableOpacity>
         <TouchableOpacity 
           onPress={handleReset}
-          style={styles.buttom30}><Text style={{fontFamily: "Kanit_700Bold", fontSize: 20, color: "red"}}>ล้างค่า</Text></TouchableOpacity>
+          style={styles.buttomreset}><Text style={{fontFamily: "Kanit_700Bold", fontSize: 20, color: "red"}}>ล้างค่า</Text></TouchableOpacity>
         </View>
       </View>
       {/* แสดงผล */}
@@ -133,6 +133,8 @@ export default function Taxi() {
         </View>
       </View>
       </View>
+      <Text style={styles.idText}>ID: 6652410015</Text>
+      <Text style={styles.nameText}>NAME: Sorrawit Hawangju</Text>
       </View>
   )
 }
@@ -165,7 +167,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     borderRadius: 10
   },
-  buttom30: {
+  buttomreset: {
     width: "30%",
     alignItems: "center",
     justifyContent: "center",
@@ -177,7 +179,7 @@ const styles = StyleSheet.create({
     fontFamily: "Kanit_700Bold",
     color: "red",
   },
-  buttom70: {
+  buttomcal: {
     width: "67%",
     marginRight: 10,
     alignItems: "center",
@@ -225,5 +227,19 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     elevation: 5,
     borderRadius: 10
+  },
+  idText: {
+    color: "#333333",
+    marginTop: 16,
+    fontFamily: "Kanit_400Regular",
+    fontSize: 20,
+    textAlign : "center",
+  },
+  nameText: {
+    color: "#333333",
+    marginTop: 4,
+    fontFamily: "Kanit_400Regular",
+    fontSize: 20,
+    textAlign : "center",
   },
 })

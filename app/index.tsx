@@ -34,6 +34,8 @@ export default function Index() {
         style={{ marginTop: 20 }}
       />
       </View>
+      <Text style={styles.idText}>ID: 6652410015</Text>
+      <Text style={styles.nameText}>NAME: Sorrawit Hawangju</Text>
     </View>
   );
 }
@@ -52,5 +54,21 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#efd916",
+  },
+  idText: {
+    color: "#333333",
+    marginTop: 16,
+    fontFamily: "Kanit_400Regular",
+    fontSize: 20,
+    justifyContent: "center",
+    textAlign : "center",
+  },
+  nameText: {
+    color: "#333333",
+    marginTop: 4,
+    fontFamily: "Kanit_400Regular",
+    fontSize: 20,
+    justifyContent: "center",
+    textAlign : "center",
   },
 });
